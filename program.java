@@ -69,8 +69,14 @@ public class Tugas2 {
         System.out.print("Masukkan nominal pembayaran : ");
         uangBayar = sc.nextDouble();
         
-        uangKembalian = uangBayar - total;
-        System.out.println("Kembalian anda senilai : Rp " + uangKembalian);  
-        
+        if(uangBayar > total){
+            uangKembalian = uangBayar - total;
+            System.out.println("Kembalian anda senilai : Rp " + uangKembalian); 
+        }else if(uangBayar == total){
+            System.out.println("Uang Pas");
+        }else{
+            uangKembalian = uangBayar - total;
+            System.out.println("Maaf Uang anda kurang : Rp " + uangKembalian); 
+        }
     }
 }
